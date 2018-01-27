@@ -5,6 +5,7 @@ using UnityEngine;
 public class FishData : ScriptableObject
 {
 	public string FishType;
+	public GameObject FishPrefab;
 	public Color Color = Color.white;
 	public Vector3 Scale = Vector3.one;
 	public float Speed = 1f;

@@ -56,6 +56,7 @@ public class FishBankCustomEditor : Editor
 			GUI.backgroundColor = Color.white;
 			EditorGUILayout.EndHorizontal();
 
+			fish.FishPrefab = (GameObject)EditorGUILayout.ObjectField("Fish Prefab:", fish.FishPrefab, typeof(GameObject));
 			fish.Color = EditorGUILayout.ColorField("Fish Color:", fish.Color);
 			fish.Scale = EditorGUILayout.Vector3Field("Fish Scale:", fish.Scale);
 			fish.Speed = EditorGUILayout.FloatField("Fish Speed:", fish.Speed);
