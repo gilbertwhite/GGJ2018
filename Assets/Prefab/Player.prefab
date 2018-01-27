@@ -129,7 +129,7 @@ MonoBehaviour:
   MovementAcceleration: 0.03
   DefaultMovementDeceleration: 0.01
   ForcedMovementDeceleration: 0.04
-  MaxRotationSpeed: 3
+  MaxRotationSpeed: 1
   RotationAcceleration: 1
   DefaultRotationDeceleration: 0.5
   ObjectToTilt: {fileID: 4022814451318914}

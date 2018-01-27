@@ -40,19 +40,6 @@ public class PlayerController : MonoBehaviour
 		UpdateDirections();
 		UpdateSpeed();
 		UpdateRotation();
-
-		transform.position += transform.forward * m_Speed;
-		transform.eulerAngles = new Vector3(
-			transform.eulerAngles.x,
-			transform.eulerAngles.y + m_Rotation,
-			transform.eulerAngles.z
-		);
-
-		ObjectToTilt.localEulerAngles = new Vector3(
-			0,
-			0,
-			-Mathf.Clamp(m_Rotation * TiltSpeed, -MaxTilt, MaxTilt)
-		);
 	}
 
 	// LateUpdate is called after Update each frame
@@ -65,22 +52,21 @@ public class PlayerController : MonoBehaviour
 
 	private void UpdateDirections()
 	{
-		if(Input.GetKeyDown(KeyCode.UpArrow))
-		{
+		if (Input.GetKey(KeyCode.UpArrow)) {
 			m_Directions.z = 1;
-		}
-		else if(Input.GetKeyDown(KeyCode.DownArrow))
-		{
+		} else if (Input.GetKey(KeyCode.DownArrow)) {
 			m_Directions.z = -1;
+		} else {
+			m_Directions.z = 0;
 		}
 
-		if(Input.GetKeyDown(KeyCode.LeftArrow))
-		{
+		if(Input.GetKey(KeyCode.LeftArrow)) {
 			m_Directions.x = -1;
 		}
-		else if(Input.GetKeyDown(KeyCode.RightArrow))
-		{
+		else if(Input.GetKey(KeyCode.RightArrow)) {
 			m_Directions.x = 1;
+		} else {
+			m_Directions.x = 0;
 		}
 	}
 
@@ -93,13 +79,17 @@ public class PlayerController : MonoBehaviour
 			m_Speed = Mathf.Min(MaxMovementSpeed, m_Speed + MovementAcceleration * Time.deltaTime);
 		else if (m_Directions.z == -1)
 			m_Speed = Mathf.Max(0, m_Speed - ForcedMovementDeceleration * Time.deltaTime);
+
+		// Update player position
+		transform.position += transform.forward * m_Speed;
 	}
 	 
 	private void UpdateRotation()
 	{
 		
 		if (m_Directions.x == 0 && m_Rotation != 0) {
-			// DO NOTHING
+			int rotationDirection = m_Rotation > 0 ? 1 : -1;
+			m_Rotation = Mathf.Max(0, Mathf.Abs(m_Rotation) - DefaultRotationDeceleration * Time.deltaTime) * rotationDirection;
 		}
 		else if (m_Directions.x == 1) {
 			m_Rotation = Mathf.Min(MaxRotationSpeed, m_Rotation + RotationAcceleration * Time.deltaTime);
@@ -108,6 +98,19 @@ public class PlayerController : MonoBehaviour
 			m_Rotation = Mathf.Max(-MaxRotationSpeed, m_Rotation - RotationAcceleration * Time.deltaTime);
 		}
 
+		// Update Player Rotation
+		transform.eulerAngles = new Vector3(
+			transform.eulerAngles.x,
+			transform.eulerAngles.y + m_Rotation,
+			transform.eulerAngles.z
+		);
+
+		// Update player Tilting
+		ObjectToTilt.localEulerAngles = new Vector3(
+			0,
+			0,
+			-Mathf.Clamp(m_Rotation * TiltSpeed, -MaxTilt, MaxTilt)
+		);
 	}
 
 }
