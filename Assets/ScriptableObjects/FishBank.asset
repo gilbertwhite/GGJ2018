@@ -11,4 +11,106 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00b611f0e2a0645e88b9b40868122f87, type: 3}
   m_Name: FishBank
   m_EditorClassIdentifier: 
-  FishTypes: []
+  FishTypes:
+  - {fileID: 114554598612798494}
+  - {fileID: 114539307001675552}
+  - {fileID: 114535604038279126}
+  - {fileID: 114283036449286048}
+  - {fileID: 114595302356429822}
+  - {fileID: 114557959646822646}
+--- !u!114 &114283036449286048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6dc700fe98e4ba994dac2e6d5afe51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FishType: Swordfish
+  Color: {r: 1, g: 1, b: 1, a: 1}
+  Scale: {x: 1, y: 1, z: 1}
+  Speed: 25
+  AttractionDuration: 8
+--- !u!114 &114535604038279126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6dc700fe98e4ba994dac2e6d5afe51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FishType: Whale
+  Color: {r: 1, g: 1, b: 1, a: 1}
+  Scale: {x: 2, y: 2, z: 2}
+  Speed: 9
+  AttractionDuration: 6
+--- !u!114 &114539307001675552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6dc700fe98e4ba994dac2e6d5afe51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FishType: Baby shark
+  Color: {r: 0.6911765, g: 0.6860943, b: 0.6860943, a: 1}
+  Scale: {x: 0.9, y: 0.9, z: 0.9}
+  Speed: 13
+  AttractionDuration: 10
+--- !u!114 &114554598612798494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6dc700fe98e4ba994dac2e6d5afe51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FishType: Shark
+  Color: {r: 0.52205884, g: 0.52973616, b: 0.52973616, a: 1}
+  Scale: {x: 1.3, y: 1.3, z: 2}
+  Speed: 19
+  AttractionDuration: 15
+--- !u!114 &114557959646822646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6dc700fe98e4ba994dac2e6d5afe51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FishType: Killer Whale
+  Color: {r: 0.25, g: 0.24816176, b: 0.24816176, a: 1}
+  Scale: {x: 1, y: 1, z: 1}
+  Speed: 12
+  AttractionDuration: 14
+--- !u!114 &114595302356429822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6dc700fe98e4ba994dac2e6d5afe51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FishType: Turtle
+  Color: {r: 0.017787624, g: 0.3455882, b: 0.08786911, a: 1}
+  Scale: {x: 1, y: 1, z: 1}
+  Speed: 5
+  AttractionDuration: 8
