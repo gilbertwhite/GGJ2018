@@ -86,7 +86,7 @@ Transform:
   m_GameObject: {fileID: 1070021187600246}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.012995358, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 4214795482950702}
   m_RootOrder: 0
@@ -99,7 +99,7 @@ Transform:
   m_GameObject: {fileID: 1381286360810060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -57.4, y: 10.8, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4022814451318914}
   - {fileID: 4848958799447786}
@@ -259,11 +259,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 4022814451318914}
   MinMotionSpeed: 1
-  MaxMotionSpeed: 3
+  MaxMotionSpeed: 1
   MinMotion: 0.005
-  MaxMotion: 0.1
+  MaxMotion: 0.01
   Direction: {x: 0, y: 1, z: 0}
-  Intensity: 0
+  Intensity: 1.9168519
 --- !u!114 &114735716536669196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -275,10 +275,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ad0f0ef80fa411a859f3449fc33d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraOffset: {x: 0, y: 1, z: -2}
-  CameraTargetOffset: {x: 0, y: 1.5, z: 0}
+  CameraOffset: {x: 0, y: 5, z: -14}
+  CameraTargetOffset: {x: 0, y: 0, z: -1}
   SonarFx: {fileID: 0}
-  WaveDuration: 5
+  WaveDuration: 1
   MaxMovementSpeed: 50
   MovementAcceleration: 1.5
   DefaultMovementDeceleration: 0.5

@@ -1,11 +1,13 @@
 fileFormatVersion: 2
 guid: 91be4dce18a59483d8d694e9378da4b9
-timeCreated: 1516849679
+timeCreated: 1517088649
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - FishContainer: {instanceID: 0}
+  - FishBank: {fileID: 11400000, guid: dc5c1c1fccd874414b68d14f53a1d0f1, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
