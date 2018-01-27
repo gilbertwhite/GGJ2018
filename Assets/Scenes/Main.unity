@@ -372,11 +372,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114735716536669196, guid: 411c60d3ca230420f9b6f0e58a90b0c1,
-        type: 2}
-      propertyPath: MaxRotationSpeed
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 411c60d3ca230420f9b6f0e58a90b0c1, type: 2}
   m_IsPrefabParent: 0

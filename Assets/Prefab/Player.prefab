@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4214795482950702}
   - component: {fileID: 114854015642784462}
   - component: {fileID: 114735716536669196}
+  - component: {fileID: 114124822682449010}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -113,6 +114,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1070021187600246}
   m_Mesh: {fileID: 4300000, guid: 4bcb8d3adc8b84a4b88ad2ecc3c7b785, type: 3}
+--- !u!114 &114124822682449010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1381286360810060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aad154ea41e324126bd31097fdbbfa2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 4022814451318914}
+  MinMotionSpeed: 1
+  MaxMotionSpeed: 3
+  MinMotion: 0.005
+  MaxMotion: 0.1
+  Direction: {x: 0, y: 1, z: 0}
+  Intensity: 0
 --- !u!114 &114735716536669196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraOffset: {x: 0, y: 2, z: -5}
+  CameraTargetOffset: {x: 0, y: 1.5, z: 0}
   MaxMovementSpeed: 5
   MovementAcceleration: 0.03
   DefaultMovementDeceleration: 0.01
@@ -146,3 +166,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81be395ef9c044fcba720bcf59e2f55a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedWaveRatio: 1

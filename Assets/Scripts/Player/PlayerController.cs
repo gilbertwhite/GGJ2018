@@ -5,33 +5,35 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour 
 {
 	[Header("Camera")]
-	public Vector3 CameraOffset;
+	[SerializeField]private Vector3 CameraOffset;
+	[SerializeField]private Vector3 CameraTargetOffset;
 
 	[Header("Movement Speed")]
-	public float MaxMovementSpeed = 1f;
-	public float MovementAcceleration = 0.01f;
-	public float DefaultMovementDeceleration = 0.005f;
-	public float ForcedMovementDeceleration = 0.02f;
+	[SerializeField]private float MaxMovementSpeed = 1f;
+	[SerializeField]private float MovementAcceleration = 0.01f;
+	[SerializeField]private float DefaultMovementDeceleration = 0.005f;
+	[SerializeField]private float ForcedMovementDeceleration = 0.02f;
 
 	[Header("Rotation Speed")]
-	public float MaxRotationSpeed = 1f;
-	public float RotationAcceleration = 0.01f;
-	public float DefaultRotationDeceleration = 0.005f;
+	[SerializeField]private float MaxRotationSpeed = 1f;
+	[SerializeField]private float RotationAcceleration = 0.01f;
+	[SerializeField]private float DefaultRotationDeceleration = 0.005f;
 
 	[Header("Rotation Tilting")]
-	public Transform ObjectToTilt;
-	public float TiltSpeed = 1f;
-	public float MaxTilt = 35f;
+	[SerializeField]private Transform ObjectToTilt;
+	[SerializeField]private float TiltSpeed = 1f;
+	[SerializeField]private float MaxTilt = 35f;
 
 	// Player Movement
+	[HideInInspector]
+	public float Speed {get; private set;}
 	private Vector3 m_Directions = Vector3.zero;
-	private float m_Speed = 0;
 	private float m_Rotation = 0;
 
 	// Use this for initialization
 	private void Start () 
 	{
-		
+		Speed = 0;
 	}
 	
 	// Update is called once per frame
@@ -47,7 +49,7 @@ public class PlayerController : MonoBehaviour
 	{
 		// Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
 		Camera.main.transform.position = transform.TransformPoint(CameraOffset);
-		Camera.main.transform.LookAt(transform);
+		Camera.main.transform.LookAt(transform.position + CameraTargetOffset);
 	}
 
 	private void UpdateDirections()
@@ -74,14 +76,14 @@ public class PlayerController : MonoBehaviour
 	private void UpdateSpeed()
 	{
 		if (m_Directions.z == 0)
-			m_Speed = Mathf.Max(0, m_Speed - DefaultMovementDeceleration * Time.deltaTime);
+			Speed = Mathf.Max(0, Speed - DefaultMovementDeceleration * Time.deltaTime);
 		else if (m_Directions.z == 1)
-			m_Speed = Mathf.Min(MaxMovementSpeed, m_Speed + MovementAcceleration * Time.deltaTime);
+			Speed = Mathf.Min(MaxMovementSpeed, Speed + MovementAcceleration * Time.deltaTime);
 		else if (m_Directions.z == -1)
-			m_Speed = Mathf.Max(0, m_Speed - ForcedMovementDeceleration * Time.deltaTime);
+			Speed = Mathf.Max(0, Speed - ForcedMovementDeceleration * Time.deltaTime);
 
 		// Update player position
-		transform.position += transform.forward * m_Speed;
+		transform.position += transform.forward * Speed;
 	}
 	 
 	private void UpdateRotation()

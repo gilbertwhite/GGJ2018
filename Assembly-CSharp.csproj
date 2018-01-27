@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\HUD\HUD.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Player\WaveMotion.cs" />
      <None Include="Assets\AxeyWorks\Low Poly v2\Shaders\AxeyWorksPolyWaterBlendFoam.shader" />
      <None Include="Assets\AxeyWorks\Low Poly v2\Shaders\AxeyWorksMobDist.cginc" />
      <None Include="Assets\AxeyWorks\Low Poly v2\Shaders\AxeyWorksMobDist.shader" />
