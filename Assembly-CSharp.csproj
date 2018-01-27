@@ -51,8 +51,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Data\FishBank.cs" />
+     <Compile Include="Assets\Scripts\Data\FishData.cs" />
+     <Compile Include="Assets\Scripts\Fishes\Fish.cs" />
+     <Compile Include="Assets\Scripts\Fishes\FishController.cs" />
+     <Compile Include="Assets\Scripts\Fishes\FishFactory.cs" />
+     <Compile Include="Assets\Scripts\Fishes\Narwhal.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\HUD\HUD.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
