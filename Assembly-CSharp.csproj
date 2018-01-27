@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AxeyWorks\Low Poly v2\Scripts\AxeyWorksMobileDistortion.cs" />
+     <Compile Include="Assets\AxeyWorks\Low Poly v2\Scripts\PolyWater.cs" />
      <Compile Include="Assets\Scripts\Data\FishBank.cs" />
      <Compile Include="Assets\Scripts\Data\FishData.cs" />
      <Compile Include="Assets\Scripts\Fishes\Fish.cs" />
@@ -59,7 +61,12 @@
      <Compile Include="Assets\Scripts\Fishes\Narwhal.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\HUD\HUD.cs" />
+     <Compile Include="Assets\Scripts\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+     <None Include="Assets\AxeyWorks\Low Poly v2\Shaders\AxeyWorksPolyWaterBlendFoam.shader" />
+     <None Include="Assets\AxeyWorks\Low Poly v2\Shaders\AxeyWorksMobDist.cginc" />
+     <None Include="Assets\AxeyWorks\Low Poly v2\Shaders\AxeyWorksMobDist.shader" />
+     <None Include="Assets\AxeyWorks\Low Poly v2\Shaders\AxeyWorksDistortion.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
