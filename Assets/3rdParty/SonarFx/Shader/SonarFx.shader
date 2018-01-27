@@ -29,6 +29,7 @@ Shader "Hidden/SonarFX"
         _SonarWaveParams ("Wave Params", Vector) = (1, 20, 20, 10)
         _SonarWaveVector ("Wave Vector", Vector) = (0, 0, 1, 0)
         _SonarAddColor   ("Add Color",   Color)  = (0, 0, 0, 0)
+        _SonarEmission   ("Emission",    Vector) = (1, 1, 1)
     }
     SubShader
     {
@@ -49,6 +50,7 @@ Shader "Hidden/SonarFX"
         float4 _SonarWaveParams; // Amp, Exp, Interval, Speed
         float3 _SonarWaveVector;
         float3 _SonarAddColor;
+        float3 _SonarEmissionSpeed;
 
         void surf(Input IN, inout SurfaceOutput o)
         {
@@ -57,7 +59,7 @@ Shader "Hidden/SonarFX"
 #else
             float w = length(IN.worldPos - _SonarWaveVector);
 #endif
-
+			
             // Moving wave.
             w -= _Time.y * _SonarWaveParams.w;
 
@@ -72,9 +74,11 @@ Shader "Hidden/SonarFX"
             // Amplify.
             w *= _SonarWaveParams.x;
 
+            w *= _SonarEmissionSpeed.x;
+
             // Apply to the surface.
             o.Albedo = _SonarBaseColor;
-            o.Emission = _SonarWaveColor * w + _SonarAddColor;
+            o.Emission =  _SonarWaveColor * w + _SonarAddColor;
         }
 
         ENDCG

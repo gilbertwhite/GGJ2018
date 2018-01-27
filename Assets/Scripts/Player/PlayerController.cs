@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerController : MonoBehaviour 
 {
@@ -34,10 +35,13 @@ public class PlayerController : MonoBehaviour
 	private Vector3 m_Directions = Vector3.zero;
 	private float m_Rotation = 0;
 
+	private SphereCollider m_Collider;
+
 	// Use this for initialization
 	private void Start () 
 	{
 		Speed = 0;
+		m_Collider = GetComponentInChildren<SphereCollider>();
 	}
 	
 	// Update is called once per frame
@@ -76,11 +80,19 @@ public class PlayerController : MonoBehaviour
 		}
 
 		if (Input.GetKeyDown (KeyCode.Space)) {
-			SonarFx.origin = transform.position;
-			SonarFx.Launch (WaveDuration);
+			ActivateSonar ();
 		}
 		
 	}
+
+	private void ActivateSonar()
+	{
+		SonarFx.origin = transform.position;
+		SonarFx.Launch (WaveDuration);
+		m_Collider.radius = 0;
+		DOTween.To(()=> m_Collider.radius, x=> m_Collider.radius = x, 3f, WaveDuration);
+	}
+
 
 	private void UpdateSpeed()
 	{

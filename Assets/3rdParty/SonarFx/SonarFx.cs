@@ -77,19 +77,22 @@ public class SonarFx : MonoBehaviour
     int waveColorID;
     int waveParamsID;
     int waveVectorID;
-    int addColorID;
+	int addColorID;
+	int emissionSpeedID;
 
 	private Color m_DefaultColor;
-	//private TweenCore<Color, Color, ColorOption> m_ColorTween;
+	private Tweener m_ColorTween;
 
     void Awake()
     {
         baseColorID = Shader.PropertyToID("_SonarBaseColor");
         waveColorID = Shader.PropertyToID("_SonarWaveColor");
         waveParamsID = Shader.PropertyToID("_SonarWaveParams");
-        waveVectorID = Shader.PropertyToID("_SonarWaveVector");
-        addColorID = Shader.PropertyToID("_SonarAddColor");
+		waveVectorID = Shader.PropertyToID("_SonarWaveVector");
+		addColorID = Shader.PropertyToID("_SonarAddColor");
+		emissionSpeedID = Shader.PropertyToID("_SonarEmission");
 		m_DefaultColor = _waveColor;
+		_waveColor = Color.black;
     }
 
     void OnEnable()
@@ -107,7 +110,8 @@ public class SonarFx : MonoBehaviour
     {
         Shader.SetGlobalColor(baseColorID, _baseColor);
         Shader.SetGlobalColor(waveColorID, _waveColor);
-        Shader.SetGlobalColor(addColorID, _addColor);
+		Shader.SetGlobalColor(addColorID, _addColor);
+		Shader.SetGlobalVector(emissionSpeedID, Vector3.one);
 
         var param = new Vector4(_waveAmplitude, _waveExponent, _waveInterval, _waveSpeed);
         Shader.SetGlobalVector(waveParamsID, param);
@@ -126,14 +130,11 @@ public class SonarFx : MonoBehaviour
 
 	public void Launch(float aDuration)
 	{
+		Shader.SetGlobalVector(emissionSpeedID, Vector3.zero);
 		_waveColor = m_DefaultColor;
-		/*
-		//DOTween.To(()=> transform.position, x=> transform.position = x, new Vector3(2,2,2), 1);
 		if (m_ColorTween != null) {
-			DOTween.Kill (m_ColorTween);
+			m_ColorTween.Kill ();
 		}
-		m_ColorTween = 
-			*/
-			DOTween.To(()=> _waveColor, x=> _waveColor = x, Color.black, aDuration);
+		m_ColorTween = DOTween.To(()=> _waveColor, x=> _waveColor = x, Color.black, aDuration);
 	}
 }
