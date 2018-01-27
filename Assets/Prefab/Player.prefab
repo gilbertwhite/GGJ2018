@@ -133,7 +133,7 @@ MonoBehaviour:
   RotationAcceleration: 1
   DefaultRotationDeceleration: 0.5
   ObjectToTilt: {fileID: 4022814451318914}
-  TiltSpeed: 1
+  TiltSpeed: 35
   MaxTilt: 35
 --- !u!114 &114854015642784462
 MonoBehaviour:

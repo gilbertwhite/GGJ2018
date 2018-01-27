@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
 		ObjectToTilt.localEulerAngles = new Vector3(
 			0,
 			0,
-			Mathf.Clamp(m_Rotation * TiltSpeed, -MaxTilt, MaxTilt)
+			-Mathf.Clamp(m_Rotation * TiltSpeed, -MaxTilt, MaxTilt)
 		);
 	}
 
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
 	void LateUpdate () 
 	{
 		// Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
-		Camera.main.transform.position = transform.position + CameraOffset;
+		Camera.main.transform.position = transform.TransformPoint(CameraOffset);
 		Camera.main.transform.LookAt(transform);
 	}
 
