@@ -5,16 +5,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{34F37DCD-085B-68A8-DE6C-7DF8C7636D4C}</ProjectGuid>
+    <ProjectGuid>{779C123C-F208-D216-4BD5-DA6A68EBCA80}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
     <RootNamespace></RootNamespace>
@@ -300,24 +300,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Scripts\AxeyWorksMobileDistortion.cs" />
-    <Compile Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Scripts\PolyWater.cs" />
-    <Compile Include="Assets\3rdParty\SonarFx\SonarFx.cs" />
-    <Compile Include="Assets\3rdParty\SonarFx\SonarFxSwitcher.cs" />
-    <Compile Include="Assets\Demigiant\DOTween\Examples\Basics.cs" />
-    <Compile Include="Assets\Demigiant\DOTween\Examples\Sequences.cs" />
-    <Compile Include="Assets\Scripts\Data\FishBank.cs" />
-    <Compile Include="Assets\Scripts\Data\FishData.cs" />
-    <Compile Include="Assets\Scripts\Fishes\Fish.cs" />
-    <Compile Include="Assets\Scripts\Fishes\FishController.cs" />
-    <Compile Include="Assets\Scripts\Fishes\FishFactory.cs" />
-    <Compile Include="Assets\Scripts\Fishes\Narwhal.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\HUD\HUD.cs" />
-    <Compile Include="Assets\Scripts\Player\Player.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Player\WaveMotion.cs" />
-    <Compile Include="Assets\Scripts\Utils\MeshCombiner.cs" />
+    <ProjectReference Include="GGJ2018.csproj">
+      <Project>{34F37DCD-085B-68A8-DE6C-7DF8C7636D4C}</Project>
+      <Name>GGJ2018</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\3rdParty\SonarFx\Editor\SonarFxEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Shaders\AxeyWorksDistortion.shader" />

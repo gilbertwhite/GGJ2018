@@ -18,6 +18,42 @@ MonoBehaviour:
   - {fileID: 114283036449286048}
   - {fileID: 114595302356429822}
   - {fileID: 114557959646822646}
+  - {fileID: 114111781895900792}
+  - {fileID: 114238745990590602}
+--- !u!114 &114111781895900792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6dc700fe98e4ba994dac2e6d5afe51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FishType: Grampus
+  FishPrefab: {fileID: 1406701933572942, guid: 79095520ab86d4df28780bf9a0c1ce3c, type: 2}
+  Color: {r: 1, g: 1, b: 1, a: 1}
+  Scale: {x: 2, y: 2, z: 2}
+  Speed: 14
+  AttractionDuration: 12
+--- !u!114 &114238745990590602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6dc700fe98e4ba994dac2e6d5afe51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FishType: Tuna
+  FishPrefab: {fileID: 1351835298929318, guid: 1916ed6ea8dc2e8488b575a1dfc81482, type: 2}
+  Color: {r: 0.5441177, g: 0.5321151, b: 0.5321151, a: 1}
+  Scale: {x: 0, y: 1, z: 1}
+  Speed: 20
+  AttractionDuration: 4
 --- !u!114 &114283036449286048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,6 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FishType: Swordfish
+  FishPrefab: {fileID: 1718164269754228, guid: b988abf4dda874930a5dd4a3b74f2acd, type: 2}
   Color: {r: 1, g: 1, b: 1, a: 1}
   Scale: {x: 1, y: 1, z: 1}
   Speed: 25
@@ -46,6 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FishType: Whale
+  FishPrefab: {fileID: 1351835298929318, guid: 2424eafcf4122460f83e49922333292e, type: 2}
   Color: {r: 1, g: 1, b: 1, a: 1}
   Scale: {x: 2, y: 2, z: 2}
   Speed: 9
@@ -62,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FishType: Baby shark
+  FishPrefab: {fileID: 1377568913347392, guid: aaaac4b150ca9434b836c7dfffcbcbd0, type: 2}
   Color: {r: 0.6911765, g: 0.6860943, b: 0.6860943, a: 1}
   Scale: {x: 0.9, y: 0.9, z: 0.9}
   Speed: 13
@@ -78,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FishType: Shark
+  FishPrefab: {fileID: 1377568913347392, guid: aaaac4b150ca9434b836c7dfffcbcbd0, type: 2}
   Color: {r: 0.52205884, g: 0.52973616, b: 0.52973616, a: 1}
   Scale: {x: 1.3, y: 1.3, z: 2}
   Speed: 19
@@ -94,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FishType: Killer Whale
+  FishPrefab: {fileID: 1454263483585220, guid: e7b87cb7de9df45458219874bbfe9782, type: 2}
   Color: {r: 0.25, g: 0.24816176, b: 0.24816176, a: 1}
   Scale: {x: 1, y: 1, z: 1}
   Speed: 12
@@ -110,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FishType: Turtle
+  FishPrefab: {fileID: 1442148307642916, guid: 9de485aee3d8940c4846dd36a93c3e20, type: 2}
   Color: {r: 0.017787624, g: 0.3455882, b: 0.08786911, a: 1}
   Scale: {x: 1, y: 1, z: 1}
   Speed: 5
