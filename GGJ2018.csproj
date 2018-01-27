@@ -295,6 +295,7 @@
     <Compile Include="Assets\Scripts\Fishes\Narwhal.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HUD\HUD.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
