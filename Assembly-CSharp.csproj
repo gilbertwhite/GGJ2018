@@ -55,6 +55,8 @@
      <Compile Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Scripts\PolyWater.cs" />
      <Compile Include="Assets\3rdParty\SonarFx\SonarFx.cs" />
      <Compile Include="Assets\3rdParty\SonarFx\SonarFxSwitcher.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Examples\Basics.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Examples\Sequences.cs" />
      <Compile Include="Assets\Scripts\Data\FishBank.cs" />
      <Compile Include="Assets\Scripts\Data\FishData.cs" />
      <Compile Include="Assets\Scripts\Fishes\Fish.cs" />
@@ -67,10 +69,14 @@
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Player\WaveMotion.cs" />
      <Compile Include="Assets\Scripts\Utils\MeshCombiner.cs" />
+     <None Include="Assets\Demigiant\DOTween\readme.txt" />
+     <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
      <None Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Shaders\AxeyWorksPolyWaterBlendFoam.shader" />
      <None Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Shaders\AxeyWorksMobDist.cginc" />
      <None Include="Assets\3rdParty\SonarFx\Shader\SonarFx.shader" />
      <None Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Shaders\AxeyWorksMobDist.shader" />
+     <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
+     <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
      <None Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Shaders\AxeyWorksDistortion.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -155,6 +161,21 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>/Users/Qwald/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>/Users/Qwald/GGJ2018/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>/Users/Qwald/GGJ2018/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween46">
+ <HintPath>/Users/Qwald/GGJ2018/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween43">
+ <HintPath>/Users/Qwald/GGJ2018/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween50">
+ <HintPath>/Users/Qwald/GGJ2018/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
 	[Header("SonarFX")]
 	[SerializeField]private SonarFx SonarFx;
+	public float WaveDuration = 5f;
 
 	[Header("Movement Speed")]
 	[SerializeField]private float MaxMovementSpeed = 1f;
@@ -75,7 +76,8 @@ public class PlayerController : MonoBehaviour
 		}
 
 		if (Input.GetKeyDown (KeyCode.Space)) {
-			SonarFx.Launch ();
+			SonarFx.origin = transform.position;
+			SonarFx.Launch (WaveDuration);
 		}
 		
 	}

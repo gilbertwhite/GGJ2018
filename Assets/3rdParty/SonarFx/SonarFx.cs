@@ -21,6 +21,9 @@
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 using UnityEngine;
+using DG.Tweening;
+//using DG.Tweening.Core;
+//using DG.Tweening.Plugins.Options;
 
 [RequireComponent(typeof(Camera))]
 public class SonarFx : MonoBehaviour
@@ -76,6 +79,9 @@ public class SonarFx : MonoBehaviour
     int waveVectorID;
     int addColorID;
 
+	private Color m_DefaultColor;
+	//private TweenCore<Color, Color, ColorOption> m_ColorTween;
+
     void Awake()
     {
         baseColorID = Shader.PropertyToID("_SonarBaseColor");
@@ -83,6 +89,7 @@ public class SonarFx : MonoBehaviour
         waveParamsID = Shader.PropertyToID("_SonarWaveParams");
         waveVectorID = Shader.PropertyToID("_SonarWaveVector");
         addColorID = Shader.PropertyToID("_SonarAddColor");
+		m_DefaultColor = _waveColor;
     }
 
     void OnEnable()
@@ -117,9 +124,16 @@ public class SonarFx : MonoBehaviour
         }
     }
 
-	public void Launch()
+	public void Launch(float aDuration)
 	{
-		//_waveInterval = 1;
-
+		_waveColor = m_DefaultColor;
+		/*
+		//DOTween.To(()=> transform.position, x=> transform.position = x, new Vector3(2,2,2), 1);
+		if (m_ColorTween != null) {
+			DOTween.Kill (m_ColorTween);
+		}
+		m_ColorTween = 
+			*/
+			DOTween.To(()=> _waveColor, x=> _waveColor = x, Color.black, aDuration);
 	}
 }
