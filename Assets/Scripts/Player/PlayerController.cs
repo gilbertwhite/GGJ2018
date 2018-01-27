@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
 	[SerializeField]private Vector3 CameraOffset;
 	[SerializeField]private Vector3 CameraTargetOffset;
 
+	[Header("SonarFX")]
+	[SerializeField]private SonarFx SonarFx;
+
 	[Header("Movement Speed")]
 	[SerializeField]private float MaxMovementSpeed = 1f;
 	[SerializeField]private float MovementAcceleration = 0.01f;
@@ -70,8 +73,12 @@ public class PlayerController : MonoBehaviour
 		} else {
 			m_Directions.x = 0;
 		}
-	}
 
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			SonarFx.Launch ();
+		}
+		
+	}
 
 	private void UpdateSpeed()
 	{

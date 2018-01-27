@@ -116,4 +116,10 @@ public class SonarFx : MonoBehaviour
             Shader.SetGlobalVector(waveVectorID, _origin);
         }
     }
+
+	public void Launch()
+	{
+		//_waveInterval = 1;
+
+	}
 }

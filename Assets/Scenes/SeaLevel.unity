@@ -25910,6 +25910,7 @@ GameObject:
   - component: {fileID: 591563571}
   - component: {fileID: 591563570}
   - component: {fileID: 591563569}
+  - component: {fileID: 591563574}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -25980,6 +25981,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &591563574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591563568}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c725fe963b534280bc779c2e7f23fb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mode: 1
+  _direction: {x: 0, y: 0, z: 1}
+  _origin: {x: 0, y: 0, z: 0}
+  _baseColor: {r: 0.2, g: 0.2, b: 0.2, a: 0}
+  _waveColor: {r: 0.19999999, g: 0.76827586, b: 1, a: 0}
+  _waveAmplitude: 2
+  _waveExponent: 22
+  _waveInterval: 20
+  _waveSpeed: 10
+  _addColor: {r: 0, g: 0, b: 0, a: 1}
+  shader: {fileID: 4800000, guid: 6d12e7ab487bf49d18b89038af741a18, type: 3}
 --- !u!1001 &592135787
 Prefab:
   m_ObjectHideFlags: 0
@@ -39260,6 +39283,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114735716536669196, guid: 411c60d3ca230420f9b6f0e58a90b0c1,
+        type: 2}
+      propertyPath: SonarFx
+      value: 
+      objectReference: {fileID: 591563574}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 411c60d3ca230420f9b6f0e58a90b0c1, type: 2}
   m_IsPrefabParent: 0

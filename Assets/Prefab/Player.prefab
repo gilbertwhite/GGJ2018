@@ -145,6 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraOffset: {x: 0, y: 1, z: -2}
   CameraTargetOffset: {x: 0, y: 1.5, z: 0}
+  SonarFx: {fileID: 0}
   MaxMovementSpeed: 50
   MovementAcceleration: 1.5
   DefaultMovementDeceleration: 0.5
