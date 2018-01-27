@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B17F9284-BDC9-997B-6E9E-43F17799C96E}</ProjectGuid>
+    <ProjectGuid>{9C2660EA-11F4-B096-567A-72AD0045BE4C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>Assets</BaseDirectory>
@@ -51,28 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Scripts\AxeyWorksMobileDistortion.cs" />
-     <Compile Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Scripts\PolyWater.cs" />
-     <Compile Include="Assets\3rdParty\SonarFx\SonarFx.cs" />
-     <Compile Include="Assets\3rdParty\SonarFx\SonarFxSwitcher.cs" />
-     <Compile Include="Assets\Scripts\Data\FishBank.cs" />
-     <Compile Include="Assets\Scripts\Data\FishData.cs" />
-     <Compile Include="Assets\Scripts\Fishes\Fish.cs" />
-     <Compile Include="Assets\Scripts\Fishes\FishController.cs" />
-     <Compile Include="Assets\Scripts\Fishes\FishFactory.cs" />
-     <Compile Include="Assets\Scripts\Fishes\Narwhal.cs" />
-     <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\HUD\HUD.cs" />
-     <Compile Include="Assets\Scripts\Player\Player.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\Player\Sonar.cs" />
-     <Compile Include="Assets\Scripts\Player\WaveMotion.cs" />
-     <Compile Include="Assets\Scripts\Utils\MeshCombiner.cs" />
-     <None Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Shaders\AxeyWorksPolyWaterBlendFoam.shader" />
-     <None Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Shaders\AxeyWorksMobDist.cginc" />
-     <None Include="Assets\3rdParty\SonarFx\Shader\SonarFx.shader" />
-     <None Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Shaders\AxeyWorksMobDist.shader" />
-     <None Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Shaders\AxeyWorksDistortion.shader" />
+     <Compile Include="Assets\3rdParty\SonarFx\Editor\SonarFxEditor.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -157,6 +136,10 @@
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>/Users/Qwald/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{B17F9284-BDC9-997B-6E9E-43F17799C96E}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
