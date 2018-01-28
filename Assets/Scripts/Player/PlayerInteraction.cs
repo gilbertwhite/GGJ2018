@@ -17,6 +17,9 @@ public class PlayerInteraction : MonoBehaviour
 
 	private void Update()
 	{
+		if (!GameManager.CanPlay)
+			return;
+		
 		if (Input.GetKey(KeyCode.Return)) {
 			TryInteraction();
 		}
@@ -42,8 +45,12 @@ public class PlayerInteraction : MonoBehaviour
 		// else Interaction Bubble
 		Debug.Log ("Interaction With = " + aTarget.gameObject.name);
 
+
+		GameManager.Win();
+
 		if (aTarget.transform.GetComponent<Narwhal> ()) {
 			m_CurrentReaction = Heart;
+			GameManager.Win();
 		} else {
 			m_CurrentReaction = Grumpy;
 		}

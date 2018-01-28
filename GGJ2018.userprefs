@@ -1,28 +1,13 @@
-﻿<Properties StartupItem="Assembly-CSharp.csproj">
+﻿<Properties StartupItem="GGJ2018.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Fishes/Fish.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="55" Column="22" />
-      <File FileName="Assets/Scripts/Player/PlayerInteraction.cs" Line="50" Column="38" />
-      <File FileName="Assets/Scripts/Game/BubbleItem.cs" Line="20" Column="23" />
+      <File FileName="Assets/Scripts/Sonar/SonarCollider.cs" Line="15" Column="15" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="52" Column="3" />
+      <File FileName="Assets/3rdParty/SonarFx/SonarFx.cs" Line="129" Column="10" />
+      <File FileName="Assets/3rdParty/SonarFx/Shader/SonarFx.shader" Line="64" Column="28" />
+      <File FileName="Assets/Scripts/Fishes/Fish.cs" Line="21" Column="40" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="GGJ2018" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="Game" expanded="True" />
-                <Node name="Player" expanded="True">
-                  <Node name="PlayerController.cs" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-            <Node name="Assembly-CSharp-Editor" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
