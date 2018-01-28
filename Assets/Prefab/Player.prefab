@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ad0f0ef80fa411a859f3449fc33d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraOffset: {x: 0, y: 7.5, z: -25}
+  CameraOffset: {x: 0, y: 7.5, z: -30}
   CameraTargetOffset: {x: 0, y: 5, z: 0}
   SonarFx: {fileID: 0}
   WaveDuration: 5
