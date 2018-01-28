@@ -20,9 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4054177999571062}
   - component: {fileID: 114612054229529746}
+  - component: {fileID: 114233935689020972}
   - component: {fileID: 33501421851861924}
   - component: {fileID: 23672021066124898}
   - component: {fileID: 64252204544176676}
+  - component: {fileID: 136924741333216136}
   m_Layer: 0
   m_Name: WhaleShark
   m_TagString: Fish
@@ -37,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1454263483585220}
   m_LocalRotation: {x: -6.123234e-17, y: 1, z: -6.123234e-17, w: 1.8369703e-16}
-  m_LocalPosition: {x: 1.4582156, y: 0.026868176, z: -0.068064325}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,6 +100,17 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: 4bcb8d3adc8b84a4b88ad2ecc3c7b785, type: 3}
+--- !u!114 &114233935689020972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1454263483585220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483356656fadb4808882767fc88379ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114612054229529746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,3 +123,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 0}
+--- !u!136 &136924741333216136
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1454263483585220}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 10
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0.001997888}

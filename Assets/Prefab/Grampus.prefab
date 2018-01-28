@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4050647589068252}
   - component: {fileID: 114040100681046606}
+  - component: {fileID: 114532195454963410}
   - component: {fileID: 33409531015549932}
   - component: {fileID: 23770948452494336}
-  - component: {fileID: 64053009310059310}
+  - component: {fileID: 136642035990871360}
   m_Layer: 0
   m_Name: Grampus
   m_TagString: Fish
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1406701933572942}
   m_LocalRotation: {x: -6.123234e-17, y: 1, z: -6.123234e-17, w: 1.8369703e-16}
-  m_LocalPosition: {x: 0.67434543, y: 0.026187524, z: 0.044216685}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,20 +85,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1406701933572942}
   m_Mesh: {fileID: 4300004, guid: 4bcb8d3adc8b84a4b88ad2ecc3c7b785, type: 3}
---- !u!64 &64053009310059310
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1406701933572942}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300004, guid: 4bcb8d3adc8b84a4b88ad2ecc3c7b785, type: 3}
 --- !u!114 &114040100681046606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,3 +97,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 0}
+--- !u!114 &114532195454963410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1406701933572942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483356656fadb4808882767fc88379ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &136642035990871360
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1406701933572942}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 10
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

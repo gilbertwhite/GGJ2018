@@ -62,11 +62,13 @@
      <Compile Include="Assets\Scripts\Fishes\Fish.cs" />
      <Compile Include="Assets\Scripts\Fishes\FishController.cs" />
      <Compile Include="Assets\Scripts\Fishes\FishFactory.cs" />
+     <Compile Include="Assets\Scripts\Fishes\Interactable.cs" />
      <Compile Include="Assets\Scripts\Fishes\Narwhal.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\HUD\HUD.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerInteraction.cs" />
      <Compile Include="Assets\Scripts\Player\WaveMotion.cs" />
      <Compile Include="Assets\Scripts\Sonar\SonarCollider.cs" />
      <Compile Include="Assets\Scripts\Utils\MeshCombiner.cs" />
