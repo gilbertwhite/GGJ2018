@@ -61,6 +61,7 @@ public class FishBankCustomEditor : Editor
 			fish.Scale = EditorGUILayout.Vector3Field("Fish Scale:", fish.Scale);
 			fish.Speed = EditorGUILayout.FloatField("Fish Speed:", fish.Speed);
 			fish.AttractionDuration = EditorGUILayout.FloatField("Fish Attraction Duration:", fish.AttractionDuration);
+			fish.SfxWhenHitBySonar = EditorGUILayout.ObjectField("SfxWhenHitBySonar:", fish.SfxWhenHitBySonar, typeof(AudioSource)) as AudioSource;
 
 			EditorGUILayout.EndVertical();
 		}

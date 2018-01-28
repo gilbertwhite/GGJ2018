@@ -11,4 +11,5 @@ public class FishData : ScriptableObject
 	public float Speed = 1f;
 	[Tooltip("In Seconds")]
 	public float AttractionDuration =1f;
+	public AudioSource SfxWhenHitBySonar;
 }

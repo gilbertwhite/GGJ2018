@@ -12,6 +12,6 @@ public class SonarCollider : MonoBehaviour
 			return;
 
 		Fish fish = collider.GetComponent<Fish> ();
-		fish.HitBySonar ();
+		fish.HitBySonar (transform);
 	}
 }
