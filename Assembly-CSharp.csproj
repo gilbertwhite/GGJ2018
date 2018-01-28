@@ -62,8 +62,8 @@
      <Compile Include="Assets\Scripts\Data\FishData.cs" />
      <Compile Include="Assets\Scripts\Fishes\Fish.cs" />
      <Compile Include="Assets\Scripts\Fishes\FishController.cs" />
-     <Compile Include="Assets\Scripts\Fishes\FishFactory.cs" />
      <Compile Include="Assets\Scripts\Game\BubbleItem.cs" />
+     <Compile Include="Assets\Scripts\Game\Ending.cs" />
      <Compile Include="Assets\Scripts\Game\GameManager.cs" />
      <Compile Include="Assets\Scripts\Game\Interactable.cs" />
      <Compile Include="Assets\Scripts\Game\Narwhal.cs" />

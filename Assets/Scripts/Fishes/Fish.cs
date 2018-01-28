@@ -12,12 +12,18 @@ public class Fish : MonoBehaviour
 
 	private Transform m_Target;
 	private float m_AttractionDelay = 0;
-	private AudioSource Audio = new AudioSource();
+	private AudioSource Audio;
+
+	private void Start()
+	{
+		Audio = gameObject.AddComponent<AudioSource>();
+	}
 
 	public void HitBySonar(Transform aTarget)
 	{
 		m_Target = aTarget;
 		if (Data.SfxWhenHitBySonar != null) {
+			Debug.Log (Audio + " : " + Data.SfxWhenHitBySonar);
 			Audio.clip = Data.SfxWhenHitBySonar;
 			Audio.Play ();
 		}

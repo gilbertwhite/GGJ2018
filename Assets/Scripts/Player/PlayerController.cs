@@ -54,6 +54,9 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	private void Update ()
 	{
+		if (!GameManager.CanPlay)
+			return;
+		
 		UpdateDirections();
 		UpdateSpeed();
 		UpdateRotation();
