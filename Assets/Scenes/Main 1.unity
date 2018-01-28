@@ -433,6 +433,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91be4dce18a59483d8d694e9378da4b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FishContainer: {fileID: 0}
+  FishBank: {fileID: 0}
 --- !u!4 &1079397652
 Transform:
   m_ObjectHideFlags: 0
