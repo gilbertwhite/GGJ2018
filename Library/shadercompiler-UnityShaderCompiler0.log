@@ -1,2 +1,9 @@
 Base path: /Applications/Unity/Unity.app/Contents
 Cmd: initializeCompiler
+Cmd: preprocess
+  insize=6327 outsize=1252 ok=1
+Cmd: preprocess
+  error: 1 plat 21 at (36): Program uses geometry shaders, automatically setting target to 4.0
+  insize=11296 outsize=1336 ok=1
+Cmd: preprocess
+  insize=952 outsize=1776 ok=1
