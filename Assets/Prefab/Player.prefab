@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4214795482950702}
   - component: {fileID: 114854015642784462}
   - component: {fileID: 114735716536669196}
+  - component: {fileID: 114984587008447746}
   - component: {fileID: 114124822682449010}
   m_Layer: 8
   m_Name: Player
@@ -360,6 +361,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpeedWaveRatio: 1
+--- !u!114 &114984587008447746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1381286360810060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1e5a7ee66b04b0b9e217bedf62f609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractionDistance: 20
 --- !u!135 &135751694212506292
 SphereCollider:
   m_ObjectHideFlags: 1
