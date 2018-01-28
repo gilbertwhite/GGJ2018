@@ -336,7 +336,8 @@ MonoBehaviour:
   CameraOffset: {x: 0, y: 5, z: -14}
   CameraTargetOffset: {x: 0, y: 0, z: -1}
   SonarFx: {fileID: 0}
-  WaveDuration: 1
+  WaveDuration: 5
+  SonarSize: 50
   MaxMovementSpeed: 50
   MovementAcceleration: 1.5
   DefaultMovementDeceleration: 0.5

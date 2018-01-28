@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114708229288752950}
   - component: {fileID: 33207437065744450}
   - component: {fileID: 23883788355793500}
+  - component: {fileID: 64251139974625098}
   m_Layer: 0
   m_Name: Hammerhad_Shark
   m_TagString: Fish
@@ -82,6 +83,20 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1162692332388894}
+  m_Mesh: {fileID: 4300010, guid: 4bcb8d3adc8b84a4b88ad2ecc3c7b785, type: 3}
+--- !u!64 &64251139974625098
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1162692332388894}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300010, guid: 4bcb8d3adc8b84a4b88ad2ecc3c7b785, type: 3}
 --- !u!114 &114708229288752950
 MonoBehaviour:

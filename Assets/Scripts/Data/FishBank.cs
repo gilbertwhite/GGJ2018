@@ -32,7 +32,7 @@ public class FishBankCustomEditor : Editor
 		{
 			FishData newFish = ScriptableObject.CreateInstance (typeof(FishData)) as FishData;
 			AssetDatabase.AddObjectToAsset(newFish, m_Self);
-			//newFish.hideFlags = HideFlags.HideInHierarchy;
+			newFish.hideFlags = HideFlags.HideInHierarchy;
 			m_Self.FishTypes.Add (newFish);
 		}
 		GUI.backgroundColor = Color.white;
@@ -61,7 +61,7 @@ public class FishBankCustomEditor : Editor
 			fish.Scale = EditorGUILayout.Vector3Field("Fish Scale:", fish.Scale);
 			fish.Speed = EditorGUILayout.FloatField("Fish Speed:", fish.Speed);
 			fish.AttractionDuration = EditorGUILayout.FloatField("Fish Attraction Duration:", fish.AttractionDuration);
-			fish.SfxWhenHitBySonar = EditorGUILayout.ObjectField("SfxWhenHitBySonar:", fish.SfxWhenHitBySonar, typeof(AudioSource)) as AudioSource;
+			fish.SfxWhenHitBySonar = EditorGUILayout.ObjectField("SfxWhenHitBySonar:", fish.SfxWhenHitBySonar, typeof(AudioClip)) as AudioClip;
 
 			EditorGUILayout.EndVertical();
 		}

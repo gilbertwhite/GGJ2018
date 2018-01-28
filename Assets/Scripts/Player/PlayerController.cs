@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 	[Header("SonarFX")]
 	[SerializeField]private SonarFx SonarFx;
 	public float WaveDuration = 5f;
+	public float SonarSize = 12f;
 
 	[Header("Movement Speed")]
 	[SerializeField]private float MaxMovementSpeed = 1f;
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
 	private float m_Rotation = 0;
 
 	private SphereCollider m_Collider;
+	private Tweener m_SonarTween;
 
 	// Use this for initialization
 	private void Start () 
@@ -90,8 +92,15 @@ public class PlayerController : MonoBehaviour
 		SonarFx.origin = transform.position;
 		SonarFx.Launch (WaveDuration);
 		m_Collider.radius = 0;
-		DOTween.To(()=> m_Collider.radius, x=> m_Collider.radius = x, 3f, WaveDuration);
-	}
+		if (m_SonarTween != null) {
+			m_SonarTween.Kill ();
+		}
+
+		m_SonarTween = DOTween.To(()=> m_Collider.radius, x=> m_Collider.radius = x, SonarSize, WaveDuration)
+			.OnComplete(() => {
+				m_Collider.radius = 0;
+			});
+		}
 
 
 	private void UpdateSpeed()

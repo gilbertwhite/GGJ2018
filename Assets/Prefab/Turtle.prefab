@@ -19,8 +19,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4413597520717932}
+  - component: {fileID: 114796314888052432}
   - component: {fileID: 33696314181348248}
   - component: {fileID: 23239936008512910}
+  - component: {fileID: 64178447619903990}
   m_Layer: 0
   m_Name: Turtle
   m_TagString: Fish
@@ -82,3 +84,29 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1442148307642916}
   m_Mesh: {fileID: 4300014, guid: 4bcb8d3adc8b84a4b88ad2ecc3c7b785, type: 3}
+--- !u!64 &64178447619903990
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1442148307642916}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300014, guid: 4bcb8d3adc8b84a4b88ad2ecc3c7b785, type: 3}
+--- !u!114 &114796314888052432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1442148307642916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac24131b975f04bf3852efbb7ab0c12c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Data: {fileID: 0}

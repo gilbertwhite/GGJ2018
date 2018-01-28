@@ -16,8 +16,11 @@ public class Fish : MonoBehaviour
 	public void HitBySonar(Transform aTarget)
 	{
 		m_Target = aTarget;
-		Audio.clip = Data.SfxWhenHitBySonar;
-		Audio.Play();
+		if (Data.SfxWhenHitBySonar != null) {
+			Audio.clip = Data.SfxWhenHitBySonar;
+			Audio.Play ();
+		}
+		m_Speed = Data.Acceleration / 60;
 		m_AttractionDelay = Data.AttractionDuration;
 		float distance = Vector3.Distance (transform.position, aTarget.position);
 	}
