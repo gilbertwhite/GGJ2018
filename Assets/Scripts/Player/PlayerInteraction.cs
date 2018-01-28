@@ -45,12 +45,9 @@ public class PlayerInteraction : MonoBehaviour
 		// else Interaction Bubble
 		Debug.Log ("Interaction With = " + aTarget.gameObject.name);
 
-
-		GameManager.Win();
-
 		if (aTarget.transform.GetComponent<Narwhal> ()) {
 			m_CurrentReaction = Heart;
-			GameManager.Win();
+			StartCoroutine (NarwhalFound());
 		} else {
 			m_CurrentReaction = Grumpy;
 		}
@@ -62,5 +59,11 @@ public class PlayerInteraction : MonoBehaviour
 	{
 		yield return new WaitForSeconds (m_CurrentReaction.GetComponent<BubbleItem>().Duration);
 		m_CurrentReaction.SetActive (false);
+	}
+
+	private IEnumerator NarwhalFound()
+	{
+		yield return new WaitForSeconds (m_CurrentReaction.GetComponent<BubbleItem>().Duration);
+		GameManager.Win();
 	}
 }

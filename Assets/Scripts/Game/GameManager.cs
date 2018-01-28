@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+	
 	static public bool CanPlay = false;
+	public AudioSource Music;
 	public Transform FishContainer;
 	public FishBank FishBank;
 
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour
 	public static void Win()
 	{
 		CanPlay = false;
+		Music.Stop ();
 		SceneManager.LoadScene ("Ending", LoadSceneMode.Additive);
 	}
 }
