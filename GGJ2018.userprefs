@@ -1,12 +1,9 @@
 ﻿<Properties StartupItem="GGJ2018.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Fishes/Fish.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Game/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Sonar/SonarCollider.cs" Line="15" Column="15" />
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="52" Column="3" />
-      <File FileName="Assets/3rdParty/SonarFx/SonarFx.cs" Line="129" Column="10" />
-      <File FileName="Assets/3rdParty/SonarFx/Shader/SonarFx.shader" Line="64" Column="28" />
-      <File FileName="Assets/Scripts/Fishes/Fish.cs" Line="21" Column="40" />
+      <File FileName="Assets/Scripts/Game/GameManager.cs" Line="41" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerInteraction.cs" Line="47" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

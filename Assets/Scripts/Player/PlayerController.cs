@@ -6,8 +6,8 @@ using DG.Tweening;
 public class PlayerController : MonoBehaviour 
 {
 	[Header("Camera")]
-	[SerializeField]private Vector3 CameraOffset;
-	[SerializeField]private Vector3 CameraTargetOffset;
+	public Vector3 CameraOffset;
+	public Vector3 CameraTargetOffset;
 
 	[Header("SonarFX")]
 	[SerializeField]private SonarFx SonarFx;
@@ -65,6 +65,9 @@ public class PlayerController : MonoBehaviour
 	// LateUpdate is called after Update each frame
 	void LateUpdate () 
 	{
+		if (!GameManager.CanPlay)
+			return;
+		
 		// Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
 		Camera.main.transform.position = transform.TransformPoint(CameraOffset);
 		Camera.main.transform.LookAt(transform.position + CameraTargetOffset);
