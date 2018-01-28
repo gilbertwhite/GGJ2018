@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 	
 	static public bool CanPlay = false;
 	static public AudioSource MainMusic;
+	public float SpawningRange = 750;
 	public PlayerController Player;
 	public Transform FishContainer;
 	public FishBank FishBank;
@@ -30,7 +31,7 @@ public class GameManager : MonoBehaviour
 					continue;
 				
 				Fish fish = Instantiate (fishtype.FishPrefab, FishContainer).GetComponent<Fish> ();
-				fish.transform.position = new Vector3 (Random.Range (-1000, 1000), 0, Random.Range (-1000, 1000));
+				fish.transform.position = new Vector3 (Random.Range (-SpawningRange, SpawningRange), 0, Random.Range (-SpawningRange, SpawningRange));
 				fish.Data = fishtype;
 			}
 		}
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour
 	{
 		if (m_currentTarget >= CameraTargets.Count) {
 			Camera.main.transform.DOMove (Player.transform.TransformPoint(Player.CameraOffset), 5f).OnComplete (StartGame);
-			Camera.main.transform.DOLookAt (Player.transform.position + Player.CameraTargetOffset, 5f);
+			Camera.main.transform.DORotate (Player.GetLookAt(), 5f);
 			return;
 		}
 
@@ -72,6 +73,9 @@ public class GameManager : MonoBehaviour
 	
 	public static void Win()
 	{
+		if (!CanPlay)
+			return;
+		
 		CanPlay = false;
 		MainMusic.DOFade(0, 1f);
 		SceneManager.LoadScene ("Ending", LoadSceneMode.Additive);
