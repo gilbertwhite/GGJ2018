@@ -22,6 +22,6 @@ public class WaveMotion : MonoBehaviour {
 	{
 		Vector3 waveForce = (Direction * MinMotion) + (Direction * (MaxMotion - MinMotion) * Intensity);
 		float waveSpeed = MinMotionSpeed + (MaxMotionSpeed - MinMotionSpeed) * Intensity;
-		Target.transform.position += waveForce * Mathf.Sin(Time.time * waveSpeed);
+		Target.transform.localPosition += waveForce * Mathf.Sin(Time.time * waveSpeed);
 	}
 }

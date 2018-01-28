@@ -302,6 +302,7 @@
   <ItemGroup>
     <Compile Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Scripts\AxeyWorksMobileDistortion.cs" />
     <Compile Include="Assets\3rdParty\AxeyWorks\Low Poly v2\Scripts\PolyWater.cs" />
+    <Compile Include="Assets\3rdParty\OBJExport\OBJExporter.cs" />
     <Compile Include="Assets\3rdParty\SonarFx\SonarFx.cs" />
     <Compile Include="Assets\3rdParty\SonarFx\SonarFxSwitcher.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Examples\Basics.cs" />

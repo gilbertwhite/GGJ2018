@@ -1,0 +1,160 @@
+newmtl Color_D04
+Kd 0.9647059 0.8745098 0.5411765
+illum 2
+
+newmtl _Color_000_1
+Kd 1 1 1
+illum 2
+
+newmtl FrontColor
+Kd 1 1 1
+illum 2
+
+newmtl Beige_18
+Kd 0.9647059 0.8745098 0.5411765
+illum 2
+
+newmtl Brick_Red
+Kd 0.7764706 0.3647059 0.3647059
+illum 2
+
+newmtl Color_002
+Kd 0.7372549 0.7294118 0.6941177
+illum 2
+
+newmtl Color_F18
+Kd 0.2745098 0.4 0.1568628
+illum 2
+
+newmtl Brown_33
+Kd 0.6666667 0.5490196 0.3372549
+illum 2
+
+newmtl Color_C13
+Kd 0.6666667 0.5490196 0.3372549
+illum 2
+
+newmtl tree_crown
+Kd 0.5019608 1 0
+illum 2
+
+newmtl Color_B02
+Kd 1 0.3921569 0.1921569
+illum 2
+
+newmtl _65
+Kd 0.3686275 0.4941176 0.2470588
+illum 2
+
+newmtl _66
+Kd 0.4941176 0.4313726 0.2470588
+illum 2
+
+newmtl M_0077_DarkGreen
+Kd 0.509804 0.6666667 0.3490196
+illum 2
+
+newmtl M_0134_DimGray
+Kd 0.4117647 0.4117647 0.4117647
+illum 2
+
+newmtl Color_C24
+Kd 0.2 0.1568628 0.1137255
+illum 2
+
+newmtl Color_C08
+Kd 0.8 0.5568628 0.3137255
+illum 2
+
+newmtl Color_D10
+Kd 1 0.9921569 0.9215686
+illum 2
+
+newmtl Color_F12
+Kd 0.3019608 0.5137255 0.08627451
+illum 2
+
+newmtl _Color_D03_2
+Kd 1 0.8470588 0.3921569
+illum 2
+
+newmtl Color_C12
+Kd 0.6 0.3568628 0.1137255
+illum 2
+
+newmtl Color_C17
+Kd 0.4 0.2392157 0.07450981
+illum 2
+
+newmtl _Color_007_1
+Kd 0.227451 0.227451 0.227451
+illum 2
+
+newmtl Color_H01
+Kd 0 1 1
+illum 2
+
+newmtl Color_C19
+Kd 0.4 0.3137255 0.2392157
+illum 2
+
+newmtl _auto_1
+Kd 0.427451 0.2745098 0.1215686
+illum 2
+
+newmtl Color_C22
+Kd 0.2 0.1137255 0.03921569
+illum 2
+
+newmtl Color_005
+Kd 0.4470588 0.4470588 0.4470588
+illum 2
+
+newmtl Color_L03
+Kd 1 0.3921569 0.6941177
+illum 2
+
+newmtl Color_A01
+Kd 1 0 0
+illum 2
+
+newmtl Color_F01
+Kd 0.4941176 1 0
+illum 2
+
+newmtl Color_D08
+Kd 0.8 0.6745098 0.3137255
+illum 2
+
+newmtl Color_K11
+Kd 0.6 0 0.6
+illum 2
+
+newmtl Beige_10
+Kd 1 0.8941177 0.6
+illum 2
+
+newmtl Beige_11
+Kd 1 0.8470588 0.3921569
+illum 2
+
+newmtl Brown_09
+Kd 0.6838235 0.5028114 0.3217993
+illum 2
+
+newmtl Grey_13
+Kd 0.4117647 0.4117647 0.4117647
+illum 2
+
+newmtl Brown_13
+Kd 0.4 0.2392157 0.07450981
+illum 2
+
+newmtl Grey_12
+Kd 0.227451 0.227451 0.227451
+illum 2
+
+newmtl White_01
+Kd 1 1 1
+illum 2
+

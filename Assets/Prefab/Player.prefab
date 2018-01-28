@@ -57,9 +57,10 @@ GameObject:
   - component: {fileID: 4022814451318914}
   - component: {fileID: 33718162400563558}
   - component: {fileID: 23404844788234288}
+  - component: {fileID: 64976348865479224}
   m_Layer: 8
   m_Name: Whale
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,6 +113,7 @@ GameObject:
   - component: {fileID: 114735716536669196}
   - component: {fileID: 114984587008447746}
   - component: {fileID: 114124822682449010}
+  - component: {fileID: 54257590801978472}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -152,7 +154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1821925969383384
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +177,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1070021187600246}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.01259316, w: 0.9999207}
   m_LocalPosition: {x: 0, y: 0.012995358, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
@@ -188,8 +190,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1381286360810060}
-  m_LocalRotation: {x: 0, y: 0.9996379, z: -0, w: -0.026909577}
-  m_LocalPosition: {x: -750, y: 10.8, z: 156}
+  m_LocalRotation: {x: 0, y: 0.9365621, z: 0, w: -0.35050163}
+  m_LocalPosition: {x: -1020.64557, y: 11.756477, z: -39.064453}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4022814451318914}
@@ -499,6 +501,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1130255427902838}
   m_Mesh: {fileID: 4300000, guid: b8260c1aa763476448dccd0259229e51, type: 3}
+--- !u!54 &54257590801978472
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1381286360810060}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 84
+  m_CollisionDetection: 2
 --- !u!54 &54799085455355800
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -510,10 +527,24 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &64976348865479224
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1070021187600246}
+  m_Material: {fileID: 13400000, guid: 21ac6c0cec6f0495fa9c406546637983, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 4bcb8d3adc8b84a4b88ad2ecc3c7b785, type: 3}
 --- !u!95 &95003150447632574
 Animator:
   serializedVersion: 3
@@ -626,7 +657,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1381286360810060}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aad154ea41e324126bd31097fdbbfa2c, type: 3}
   m_Name: 
@@ -637,7 +668,7 @@ MonoBehaviour:
   MinMotion: 0.005
   MaxMotion: 0.01
   Direction: {x: 0, y: 1, z: 0}
-  Intensity: 1.9168519
+  Intensity: -0.0075000003
 --- !u!114 &114459730943192698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -649,9 +680,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535d894dbd8ef4c0d88b0776493e9dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 5
   RotationSpeed: 3
-  ScaleAmplitude: 0.02
-  ScaleIntensity: 1
+  DefaultScale: 0.02
+  ScaleAmplitude: 0.005
+  ScaleSpeed: 2
 --- !u!114 &114551552527886960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -674,9 +707,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535d894dbd8ef4c0d88b0776493e9dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 5
   RotationSpeed: 0
-  ScaleAmplitude: 0.02
-  ScaleIntensity: 1
+  DefaultScale: 0.02
+  ScaleAmplitude: 0.005
+  ScaleSpeed: 2
 --- !u!114 &114735716536669196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -694,15 +729,18 @@ MonoBehaviour:
   WaveDuration: 5
   SonarSize: 50
   MaxMovementSpeed: 50
-  MovementAcceleration: 1.5
-  DefaultMovementDeceleration: 0.5
-  ForcedMovementDeceleration: 2
+  MovementAcceleration: 50
+  DefaultMovementDeceleration: 10
+  ForcedMovementDeceleration: 25
+  BackwardSpeed: -5
   MaxRotationSpeed: 1
   RotationAcceleration: 1
   DefaultRotationDeceleration: 0.5
+  RotationIntensity: 60000
   ObjectToTilt: {fileID: 4022814451318914}
   TiltSpeed: 35
   MaxTilt: 35
+  Whale: {fileID: 0}
 --- !u!114 &114854015642784462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -714,7 +752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81be395ef9c044fcba720bcf59e2f55a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpeedWaveRatio: 1
+  SpeedWaveRatio: 0.0015
 --- !u!114 &114984587008447746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -739,5 +777,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.00001
+  m_Radius: 0
   m_Center: {x: 0, y: 0, z: 0}

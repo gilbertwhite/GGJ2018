@@ -78,10 +78,12 @@ public class SonarFx : MonoBehaviour
     int waveParamsID;
     int waveVectorID;
 	int addColorID;
-	int emissionSpeedID;
+	int progressID;
 
 	private Color m_DefaultColor;
 	private Tweener m_ColorTween;
+	private float m_StartTime = 0;
+	private float m_ElapsedTime = 0;
 
     void Awake()
     {
@@ -90,9 +92,11 @@ public class SonarFx : MonoBehaviour
         waveParamsID = Shader.PropertyToID("_SonarWaveParams");
 		waveVectorID = Shader.PropertyToID("_SonarWaveVector");
 		addColorID = Shader.PropertyToID("_SonarAddColor");
-		emissionSpeedID = Shader.PropertyToID("_SonarEmission");
+		progressID = Shader.PropertyToID("_SonarEmission");
 		m_DefaultColor = _waveColor;
 		_waveColor = Color.black;
+
+		m_StartTime = Time.time;
     }
 
     void OnEnable()
@@ -107,30 +111,33 @@ public class SonarFx : MonoBehaviour
     }
 
     void Update()
-    {
+	{
+		m_ElapsedTime = Time.time - m_StartTime;
+
         Shader.SetGlobalColor(baseColorID, _baseColor);
         Shader.SetGlobalColor(waveColorID, _waveColor);
 		Shader.SetGlobalColor(addColorID, _addColor);
-		Shader.SetGlobalVector(emissionSpeedID, Vector3.one);
 
         var param = new Vector4(_waveAmplitude, _waveExponent, _waveInterval, _waveSpeed);
-        Shader.SetGlobalVector(waveParamsID, param);
+		Shader.SetGlobalVector(waveParamsID, param);
+		Shader.SetGlobalFloat(progressID, m_ElapsedTime);
 
         if (_mode == SonarMode.Directional)
         {
             Shader.DisableKeyword("SONAR_SPHERICAL");
-            Shader.SetGlobalVector(waveVectorID, _direction.normalized);
+			Shader.SetGlobalVector(waveVectorID, _direction.normalized);
         }
         else
         {
             Shader.EnableKeyword("SONAR_SPHERICAL");
-            Shader.SetGlobalVector(waveVectorID, _origin);
+			Shader.SetGlobalVector(waveVectorID, _origin);
         }
     }
 
 	public void Launch(float aDuration)
 	{
-		Shader.SetGlobalVector(emissionSpeedID, Vector3.zero);
+		m_StartTime = Time.time;
+
 		_waveColor = m_DefaultColor;
 		if (m_ColorTween != null) {
 			m_ColorTween.Kill ();
