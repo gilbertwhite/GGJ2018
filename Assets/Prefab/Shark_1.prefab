@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 114990623002963876}
   - component: {fileID: 33625502980959798}
   - component: {fileID: 23800040723986140}
-  - component: {fileID: 64271570015320472}
   - component: {fileID: 136570316632115072}
   m_Layer: 0
   m_Name: Shark_1
@@ -86,20 +85,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1377568913347392}
   m_Mesh: {fileID: 4300006, guid: 4bcb8d3adc8b84a4b88ad2ecc3c7b785, type: 3}
---- !u!64 &64271570015320472
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1377568913347392}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300006, guid: 4bcb8d3adc8b84a4b88ad2ecc3c7b785, type: 3}
 --- !u!114 &114775527243573264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,6 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 0}
+  MinDistance: 3
+  DistanceRatio: 0.8
 --- !u!114 &114990623002963876
 MonoBehaviour:
   m_ObjectHideFlags: 1

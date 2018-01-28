@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 114233935689020972}
   - component: {fileID: 33501421851861924}
   - component: {fileID: 23672021066124898}
-  - component: {fileID: 64252204544176676}
   - component: {fileID: 136924741333216136}
   m_Layer: 0
   m_Name: WhaleShark
@@ -86,20 +85,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1454263483585220}
   m_Mesh: {fileID: 4300002, guid: 4bcb8d3adc8b84a4b88ad2ecc3c7b785, type: 3}
---- !u!64 &64252204544176676
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1454263483585220}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300002, guid: 4bcb8d3adc8b84a4b88ad2ecc3c7b785, type: 3}
 --- !u!114 &114233935689020972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,6 +108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 0}
+  MinDistance: 3
+  DistanceRatio: 0.8
 --- !u!136 &136924741333216136
 CapsuleCollider:
   m_ObjectHideFlags: 1

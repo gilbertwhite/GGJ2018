@@ -7,6 +7,8 @@ public class Fish : MonoBehaviour
 {
 	[HideInInspector]
 	public FishData Data;
+	public float MinDistance = 3f;
+	public float DistanceRatio = 0.8f;
 
 	private Transform m_Target;
 	private float m_Speed = 0;
@@ -22,7 +24,7 @@ public class Fish : MonoBehaviour
 		}
 		m_Speed = Data.Acceleration / 60;
 		m_AttractionDelay = Data.AttractionDuration;
-		float distance = Vector3.Distance (transform.position, aTarget.position);
+		float distance = Vector3.Distance (transform.position, aTarget.position) * DistanceRatio;
 	}
 
 	public void Update()

@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
 	private void Start () 
 	{
 		Speed = 0;
-		m_SonarCollider = GetComponentInChildren<SphereCollider>();
+		m_SonarCollider = GetComponentInChildren<SphereCollider>(true);
 		m_Body = GetComponent<Rigidbody>();
 	}
 	
