@@ -19,11 +19,13 @@ public class PlayerController : MonoBehaviour
 	[SerializeField]private float MovementAcceleration = 0.01f;
 	[SerializeField]private float DefaultMovementDeceleration = 0.005f;
 	[SerializeField]private float ForcedMovementDeceleration = 0.02f;
+	[SerializeField]private float BackwardSpeed = 3f;
 
 	[Header("Rotation Speed")]
 	[SerializeField]private float MaxRotationSpeed = 1f;
 	[SerializeField]private float RotationAcceleration = 0.01f;
 	[SerializeField]private float DefaultRotationDeceleration = 0.005f;
+	[SerializeField]private float RotationIntensity = 5000f;
 
 	[Header("Rotation Tilting")]
 	[SerializeField]private Transform ObjectToTilt;
@@ -33,17 +35,20 @@ public class PlayerController : MonoBehaviour
 	// Player Movement
 	[HideInInspector]
 	public float Speed {get; private set;}
+	public Transform Whale;
 	private Vector3 m_Directions = Vector3.zero;
 	private float m_Rotation = 0;
-
-	private SphereCollider m_Collider;
+	private float m_TiltForce;
+	private Rigidbody m_Body;
+	private SphereCollider m_SonarCollider;
 	private Tweener m_SonarTween;
 
 	// Use this for initialization
 	private void Start () 
 	{
 		Speed = 0;
-		m_Collider = GetComponentInChildren<SphereCollider>();
+		m_SonarCollider = GetComponentInChildren<SphereCollider>();
+		m_Body = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
@@ -84,21 +89,23 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			ActivateSonar ();
 		}
-		
+
 	}
 
 	private void ActivateSonar()
 	{
+		m_SonarCollider.gameObject.SetActive(true);
 		SonarFx.origin = transform.position;
 		SonarFx.Launch (WaveDuration);
-		m_Collider.radius = 0;
+		m_SonarCollider.radius = 0;
 		if (m_SonarTween != null) {
 			m_SonarTween.Kill ();
 		}
 
-		m_SonarTween = DOTween.To(()=> m_Collider.radius, x=> m_Collider.radius = x, SonarSize, WaveDuration)
+		m_SonarTween = DOTween.To(()=> m_SonarCollider.radius, x=> m_SonarCollider.radius = x, SonarSize, WaveDuration)
 			.OnComplete(() => {
-				m_Collider.radius = 0;
+				m_SonarCollider.radius = 0;
+				m_SonarCollider.gameObject.SetActive(false);
 			});
 		}
 
@@ -106,14 +113,15 @@ public class PlayerController : MonoBehaviour
 	private void UpdateSpeed()
 	{
 		if (m_Directions.z == 0)
-			Speed = Mathf.Max(0, Speed - DefaultMovementDeceleration * Time.deltaTime);
+			Speed = Mathf.Max(BackwardSpeed, Speed - DefaultMovementDeceleration * Time.deltaTime);
 		else if (m_Directions.z == 1)
 			Speed = Mathf.Min(MaxMovementSpeed, Speed + MovementAcceleration * Time.deltaTime);
 		else if (m_Directions.z == -1)
-			Speed = Mathf.Max(0, Speed - ForcedMovementDeceleration * Time.deltaTime);
+			Speed = Mathf.Max(BackwardSpeed, Speed - ForcedMovementDeceleration * Time.deltaTime);
 
 		// Update player position
-		transform.position += transform.forward * Speed;
+		//m_Body.AddForce ();
+		m_Body.velocity = Vector3.ClampMagnitude(transform.forward * Speed, MaxMovementSpeed);
 	}
 	 
 	private void UpdateRotation()
@@ -121,7 +129,7 @@ public class PlayerController : MonoBehaviour
 		
 		if (m_Directions.x == 0 && m_Rotation != 0) {
 			int rotationDirection = m_Rotation > 0 ? 1 : -1;
-			m_Rotation = Mathf.Max(0, Mathf.Abs(m_Rotation) - DefaultRotationDeceleration * Time.deltaTime) * rotationDirection;
+			m_Rotation = Mathf.Max(0, Mathf.Abs(m_Rotation) - RotationIntensity * DefaultRotationDeceleration * Time.deltaTime) * rotationDirection;
 		}
 		else if (m_Directions.x == 1) {
 			m_Rotation = Mathf.Min(MaxRotationSpeed, m_Rotation + RotationAcceleration * Time.deltaTime);
@@ -131,17 +139,17 @@ public class PlayerController : MonoBehaviour
 		}
 
 		// Update Player Rotation
-		transform.eulerAngles = new Vector3(
-			transform.eulerAngles.x,
-			transform.eulerAngles.y + m_Rotation,
-			transform.eulerAngles.z
-		);
+		m_Body.AddTorque(Vector3.up * m_Rotation * RotationIntensity, ForceMode.Force);
+		m_Body.angularVelocity = new Vector3(0, m_Body.angularVelocity.y, 0);
+		transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 
 		// Update player Tilting
+		m_TiltForce = Mathf.LerpAngle(m_TiltForce, m_Body.angularVelocity.y, Time.deltaTime);
+		//Debug.Log(m_Body.angularVelocity.y);
 		ObjectToTilt.localEulerAngles = new Vector3(
 			0,
 			0,
-			-Mathf.Clamp(m_Rotation * TiltSpeed, -MaxTilt, MaxTilt)
+			-Mathf.Clamp(m_Body.angularVelocity.y * TiltSpeed, -MaxTilt, MaxTilt)
 		);
 	}
 
