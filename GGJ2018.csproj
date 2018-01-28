@@ -317,6 +317,7 @@
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\WaveMotion.cs" />
+    <Compile Include="Assets\Scripts\Sonar\SonarCollider.cs" />
     <Compile Include="Assets\Scripts\Utils\MeshCombiner.cs" />
   </ItemGroup>
   <ItemGroup>
