@@ -64,18 +64,18 @@ public class PlayerController : MonoBehaviour
 
 	private void UpdateDirections()
 	{
-		if (Input.GetKey(KeyCode.UpArrow)) {
+		if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) {
 			m_Directions.z = 1;
-		} else if (Input.GetKey(KeyCode.DownArrow)) {
+		} else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
 			m_Directions.z = -1;
 		} else {
 			m_Directions.z = 0;
 		}
 
-		if(Input.GetKey(KeyCode.LeftArrow)) {
+		if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) {
 			m_Directions.x = -1;
 		}
-		else if(Input.GetKey(KeyCode.RightArrow)) {
+		else if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) {
 			m_Directions.x = 1;
 		} else {
 			m_Directions.x = 0;

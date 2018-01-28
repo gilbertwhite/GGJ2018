@@ -5,6 +5,10 @@ using UnityEngine;
 public class PlayerInteraction : MonoBehaviour 
 {
 	public float InteractionDistance = 20;
+	public GameObject Heart;
+	public GameObject Grumpy;
+
+	private GameObject m_CurrentReaction;
 
 	private void Start()
 	{
@@ -36,7 +40,20 @@ public class PlayerInteraction : MonoBehaviour
 	{
 		// if Narhwal Tusk ==> Grab it
 		// else Interaction Bubble
-
 		Debug.Log ("Interaction With = " + aTarget.gameObject.name);
+
+		if (aTarget.transform.GetComponent<Narwhal> ()) {
+			m_CurrentReaction = Heart;
+		} else {
+			m_CurrentReaction = Grumpy;
+		}
+		m_CurrentReaction.SetActive (true);
+		StartCoroutine (HideBubbleItem());
+	}
+
+	private IEnumerator HideBubbleItem()
+	{
+		yield return new WaitForSeconds (m_CurrentReaction.GetComponent<BubbleItem>().Duration);
+		m_CurrentReaction.SetActive (false);
 	}
 }
