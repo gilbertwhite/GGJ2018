@@ -73,6 +73,18 @@ public class PlayerController : MonoBehaviour
 		Camera.main.transform.LookAt(transform.position + CameraTargetOffset);
 	}
 
+	public Vector3 GetLookAt()
+	{
+		
+		GameObject temp = new GameObject ();
+		temp.transform.position = transform.TransformPoint(CameraOffset);
+		temp.transform.LookAt(transform.position + CameraTargetOffset);
+
+		Vector3 result = temp.transform.eulerAngles;
+		Destroy (temp);
+		return result;
+	}
+
 	private void UpdateDirections()
 	{
 		if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) {

@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 64392860038899802}
   - component: {fileID: 136168429517351806}
   - component: {fileID: 82889110281742228}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Narwhal
   m_TagString: Fish
   m_Icon: {fileID: 0}
