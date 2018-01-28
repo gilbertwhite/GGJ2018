@@ -31,7 +31,11 @@ public class GameManager : MonoBehaviour
 					continue;
 				
 				Fish fish = Instantiate (fishtype.FishPrefab, FishContainer).GetComponent<Fish> ();
-				fish.transform.position = new Vector3 (Random.Range (-SpawningRange, SpawningRange), 0, Random.Range (-SpawningRange, SpawningRange));
+				fish.transform.position = new Vector3 (
+					Random.Range (-SpawningRange, SpawningRange) - 720,
+					0,
+					Random.Range (-SpawningRange, SpawningRange) + 680
+				);
 				fish.Data = fishtype;
 			}
 		}
