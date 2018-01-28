@@ -8,6 +8,8 @@ public class PlayerInteraction : MonoBehaviour
 	public GameObject Heart;
 	public GameObject Grumpy;
 
+	private GameObject m_CurrentReaction;
+
 	private void Start()
 	{
 
@@ -41,17 +43,17 @@ public class PlayerInteraction : MonoBehaviour
 		Debug.Log ("Interaction With = " + aTarget.gameObject.name);
 
 		if (aTarget.transform.GetComponent<Narwhal> ()) {
-			Heart.SetActive (true);
+			m_CurrentReaction = Heart;
 		} else {
-			Grumpy.SetActive (true);
-			StartCoroutine (HideBubbleItem());
+			m_CurrentReaction = Grumpy;
 		}
+		m_CurrentReaction.SetActive (true);
+		StartCoroutine (HideBubbleItem());
 	}
 
 	private IEnumerator HideBubbleItem()
 	{
-		yield return new WaitForSeconds (3f);
-		Heart.SetActive (false);
-		Grumpy.SetActive (false);
+		yield return new WaitForSeconds (m_CurrentReaction.GetComponent<BubbleItem>().Duration);
+		m_CurrentReaction.SetActive (false);
 	}
 }
