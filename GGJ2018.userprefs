@@ -1,13 +1,20 @@
-﻿<Properties StartupItem="GGJ2018.csproj">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Fishes/Fish.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Game/BubbleItem.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="44" Column="43" />
-      <File FileName="Assets/Scripts/Sonar/SonarCollider.cs" Line="15" Column="31" />
-      <File FileName="Assets/Scripts/Player/Player.cs" Line="12" Column="32" />
-      <File FileName="Assets/3rdParty/SonarFx/SonarFx.cs" Line="133" Column="54" />
-      <File FileName="Assets/Scripts/Fishes/Fish.cs" Line="19" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="63" Column="3" />
+      <File FileName="Assets/Scripts/Player/PlayerInteraction.cs" Line="57" Column="1" />
+      <File FileName="Assets/Scripts/Game/BubbleItem.cs" Line="21" Column="2" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GGJ2018" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

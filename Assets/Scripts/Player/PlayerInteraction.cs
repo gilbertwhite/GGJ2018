@@ -50,6 +50,7 @@ public class PlayerInteraction : MonoBehaviour
 
 	private IEnumerator HideBubbleItem()
 	{
+		yield return new WaitForSeconds (3f);
 		Heart.SetActive (false);
 		Grumpy.SetActive (false);
 	}

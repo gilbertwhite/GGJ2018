@@ -14,7 +14,7 @@ public class BubbleItem : MonoBehaviour {
 	{
 		m_Index += Time.deltaTime;
 		float value = ScaleAmplitude * Mathf.Cos (ScaleIntensity * m_Index);
-		transform.localScale = new Vector3 (value);
+		transform.localScale = new Vector3 (value, value, value);
 
 		transform.localEulerAngles += Vector3.up * RotationSpeed;
 	}
