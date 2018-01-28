@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -219,8 +219,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 148200118}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1918, y: 42.63549, z: 239}
-  m_LocalScale: {x: 3611.3267, y: 79.55239, z: 100}
+  m_LocalPosition: {x: -1717, y: 42.63549, z: 239}
+  m_LocalScale: {x: 3611.3267, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -304,7 +304,7 @@ Transform:
   m_GameObject: {fileID: 180945987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -327, y: 42.63549, z: -386}
-  m_LocalScale: {x: 3611.3267, y: 83.38278, z: 100}
+  m_LocalScale: {x: 3611.3267, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -599,6 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91be4dce18a59483d8d694e9378da4b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawningRange: 600
   Player: {fileID: 1623174248}
   FishContainer: {fileID: 639067997}
   FishBank: {fileID: 11400000, guid: dc5c1c1fccd874414b68d14f53a1d0f1, type: 2}
@@ -1249,7 +1250,7 @@ Transform:
   m_GameObject: {fileID: 1010494848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -327, y: 42.63549, z: 1651}
-  m_LocalScale: {x: 3611.3267, y: 69.67573, z: 100}
+  m_LocalScale: {x: 3611.3267, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -1631,8 +1632,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2049112163}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1113, y: 42.63549, z: 239}
-  m_LocalScale: {x: 3611.3267, y: 68.455536, z: 100}
+  m_LocalPosition: {x: 1113, y: 30, z: 239}
+  m_LocalScale: {x: 3611.3267, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
