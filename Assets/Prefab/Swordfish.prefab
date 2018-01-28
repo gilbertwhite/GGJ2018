@@ -108,8 +108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 0}
-  MinDistance: 3
-  DistanceRatio: 0.8
+  MinDistance: 5
+  MinDistanceRatio: 0.05
 --- !u!136 &136209646975392622
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -7,11 +7,10 @@ public class Fish : MonoBehaviour
 {
 	[HideInInspector]
 	public FishData Data;
-	public float MinDistance = 3f;
-	public float DistanceRatio = 0.8f;
+	public float MinDistance = 5f;
+	public float MinDistanceRatio = 0.25f;
 
 	private Transform m_Target;
-	private float m_Speed = 0;
 	private float m_AttractionDelay = 0;
 	private AudioSource Audio = new AudioSource();
 
@@ -22,27 +21,22 @@ public class Fish : MonoBehaviour
 			Audio.clip = Data.SfxWhenHitBySonar;
 			Audio.Play ();
 		}
-		m_Speed = Data.Acceleration / 60;
 		m_AttractionDelay = Data.AttractionDuration;
-		float distance = Vector3.Distance (transform.position, aTarget.position) * DistanceRatio;
 	}
 
 	public void Update()
-	{
-		if (m_Speed <= 0)
+	{	
+		if (m_Target == null)
 			return;
-		
-		transform.LookAt (m_Target);
-
-		transform.position += transform.forward * m_Speed;
-
-		float speedDiff = Data.Acceleration * Time.deltaTime;
-		if(m_AttractionDelay > 0)
-			m_Speed += speedDiff;
-		else
-			m_Speed -= speedDiff;
 			
+		transform.LookAt (m_Target);
+		
+		float distance = Mathf.Max(MinDistance, Vector3.Distance (transform.position, m_Target.position));
+		transform.position += transform.forward * Data.Speed * distance * MinDistanceRatio * Time.deltaTime;
 
 		m_AttractionDelay -= Time.deltaTime;
+		if (m_AttractionDelay < 0) {
+			m_Target = null;
+		}
 	}
 }

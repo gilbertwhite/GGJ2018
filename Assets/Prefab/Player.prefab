@@ -190,8 +190,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1381286360810060}
-  m_LocalRotation: {x: 0, y: 0.9365621, z: 0, w: -0.35050163}
-  m_LocalPosition: {x: -1020.64557, y: 11.756477, z: -39.064453}
+  m_LocalRotation: {x: 0, y: 0.9996379, z: -0, w: -0.026909577}
+  m_LocalPosition: {x: -750, y: 10.8, z: 156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4022814451318914}
@@ -723,8 +723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ad0f0ef80fa411a859f3449fc33d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraOffset: {x: 0, y: 5, z: -14}
-  CameraTargetOffset: {x: 0, y: 0, z: -1}
+  CameraOffset: {x: 0, y: 7.5, z: -25}
+  CameraTargetOffset: {x: 0, y: 5, z: 0}
   SonarFx: {fileID: 0}
   WaveDuration: 5
   SonarSize: 50

@@ -300,7 +300,7 @@ MonoBehaviour:
   _direction: {x: 0, y: 0, z: 1}
   _origin: {x: 0, y: 0, z: 0}
   _baseColor: {r: 0.055363316, g: 0.099606246, b: 0.11764705, a: 1}
-  _waveColor: {r: 0, g: 0, b: 0, a: 1}
+  _waveColor: {r: 0.4862745, g: 0.8509804, b: 1, a: 0.5647059}
   _waveAmplitude: 2
   _waveExponent: 2500
   _waveInterval: 50000
@@ -556,16 +556,6 @@ Prefab:
       propertyPath: SonarFx
       value: 
       objectReference: {fileID: 591563574}
-    - target: {fileID: 114735716536669196, guid: 411c60d3ca230420f9b6f0e58a90b0c1,
-        type: 2}
-      propertyPath: DefaultRotationDeceleration
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114735716536669196, guid: 411c60d3ca230420f9b6f0e58a90b0c1,
-        type: 2}
-      propertyPath: RotationAcceleration
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 411c60d3ca230420f9b6f0e58a90b0c1, type: 2}
   m_IsPrefabParent: 0
